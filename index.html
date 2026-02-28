@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Typing Battle Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Typing Battle</h1>
+
+    <div id="joinSection">
+      <input id="username" placeholder="Enter Username">
+      <input id="room" placeholder="Enter Room Code">
+      <button onclick="joinRoom()">Join Room</button>
+    </div>
+
+    <div id="gameSection" class="hidden">
+      <p id="paragraph"></p>
+      <textarea id="inputText" placeholder="Start typing..."></textarea>
+      <p>Time: <span id="timer">0</span>s</p>
+      <button onclick="finishGame()">Finish</button>
+      <h2 id="result"></h2>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
